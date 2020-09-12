@@ -1,38 +1,294 @@
-.App {
+body{
+  font-family: 'Poppins', sans-serif !important;
+  margin:0;
+  overflow-x:hidden;
+}
+
+section{
+  padding:80px 0px;
+}
+
+/* Navbar CSS */
+.app-logo {
+  width: 100px;
+}
+
+.navItem {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+.marker {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #ffa800;
+  transition: all 0.5s ease-in-out;
+  left: 3.5%;
+}
+.navItem:nth-child(1) ~ .marker {
+  left: 3.5%;
+  transition: all 0.5s ease-in-out;
+}
+
+.navItem:hover:nth-child(2) ~ .marker {
+  left: 13.5%;
+  transition: all 0.5s ease-in-out;
+}
+.navItem:hover:nth-child(3) ~ .marker {
+  left: 24%;
+  transition: all 0.5s ease-in-out;
+}
+.navItem:hover:nth-child(4) ~ .marker {
+  left: 35%;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Button Effect */
+.btn.btn-yellow {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  border-radius: 30px;
+  color: #F3B401;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 4px 0;
+  transition: all 0.5s;
+  border: 2px solid #F3B401;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+
+
+.name-descripeion {
+  position: relative;
+  z-index: 9999;
+}
+
+.btn .btn-bg {
+  width: 0;
+  position: absolute;
+  border-radius: 30px;
+  right: -3px;
+  top: 0px;
+  transition: all 0.5s;
+}
+
+.btn.btn-yellow .btn-bg {
+  height: 32px;
+}
+
+.btn.btn-yellow .btn-bg {
+  background: linear-gradient(90deg, rgba(243, 180, 1, 1) 0%, rgba(215, 106, 61, 1) 73%, rgba(195, 52, 104, 1) 100%);
+
+}
+
+.btn-bg::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.btn-yellow:hover .btn-bg {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.btn-yellow:hover {
+   background: linear-gradient(90deg, rgba(243, 180, 1, 1) 0%, rgba(215, 106, 61, 1) 73%, rgba(195, 52, 104, 1) 100%);
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* End */
+
+/* Banner Section */
+section.banner {
+  background: #0B0B0B;
+  width: 100%;
+  height: calc(100vh - 52px);
+  padding: 0;
+}
+.banner-header {
+  font-weight: 600 !important;
+  font-size: 65px !important;
+  color: #ffffff;
+}
+
+.banner-header span {
+  color: #FFA800;
+}
+.banner-para {
+  color: #fff;
+}
+.banner-para h3 {
+  margin: 45px 0px 10px;
+  font-size: 26px;
+}
+.banner-img {
+  position: relative;
+}
+
+.banner-img:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(./img/bannerImg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+}
+
+.left-content{
+  padding-left: 5%;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 64px);
+}
+.left-content div{
+  margin:auto;
+}
+/* End */
+
+/* Our Services */
+.header-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-title h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.header-title h1 {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.header-title h1 span {
+  color: #ffa800;
+}
+.services-item {
+  min-height: 176px;
+}
+.services-item p {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.services-item h5 {
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+
+.services-item:hover {
+  background: #ffa800;
+  transition: all 0.6s ease-in-out;
+}
+
+.services-item:hover h5, .services-item:hover p {
+  color: #ffffff;
+  transition: color 0.6s ease-in-out;
+}
+
+.MuiBox-root.MuiBox-root-8.services-item {
+  transition: all 0.6s ease-in-out;
+}
+/* End */
+
+
+/* Model */
+.modal-range figure {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal-range figure figcaption {
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.modal-range figure figcaption:before {
+  position: absolute;
+  content: '';
+  width: 72px;
+  height: 35px;
+  background: #ffa800;
+  top: -6px;
+  left: 40px;
+  z-index: -1;
+}
+/* End */
+
+/* Footer CSS */
+.footer {
+  background: #0b0b0b;
+  color: #fff;
+  padding: 30px 0px;
+}
+ul.social-links {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.social-links li a {
+  background: #ffffff;
+  color: #0b0b0b;
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  transition: all 0.5s ease-in-out;
+}
+.social-links li a svg{
+  font-size: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+.social-links li a:hover {
+  background: #ffa800;
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-links li {
+  display: inline-block;
+  align-items: center;
+  margin: 0px 5px;
 }
+ul.footer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li {
+  position: relative;
+  display: inline-block;
+  margin: 0px 10px;
+  padding-left: 15px;
+}
+
+.footer-menu li:before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 23px;
+  background: #ffffff;
+  left: 0;
+}
+
+.footer-menu li:first-child:before {
+  content:none
+}
+/* END */

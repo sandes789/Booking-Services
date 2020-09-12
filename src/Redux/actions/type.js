@@ -1,0 +1,1 @@
+export const ECOM_API = 'ECOM_API'
